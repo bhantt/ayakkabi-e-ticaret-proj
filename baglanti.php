@@ -10,7 +10,7 @@ $conn = mysqli_connect($sunucu, $username, $password, $database);
 
 if(!$conn){
 
-   die("Baglanti Hatasi!" . mysqli_conenct_error());
+   die("Baglanti Hatasi!" . mysqli_connect_error());
 
 }
 echo "Baglanti Basarili!";
