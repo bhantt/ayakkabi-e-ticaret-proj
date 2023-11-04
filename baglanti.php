@@ -6,14 +6,20 @@ $username = "pardusbatu";
 $password = "123456";
 
 
-$conn = mysqli_connect($sunucu, $username, $password, $database);
+try {
+     $baglanti = new PDO("mysql:host=$sunucu;dbname=$database", "$username", "$password");
+     if($baglanti){
+      echo "basarili";
 
-if(!$conn){
-
-   die("Baglanti Hatasi!" . mysqli_connect_error());
-
+    
+     }
+     
+} catch ( PDOException $e ){
+     print "Baglanti hatasi: " . $e->getMessage();
 }
-echo "Baglanti Basarili!";
+$conn = null;
+
+
 
 
 
