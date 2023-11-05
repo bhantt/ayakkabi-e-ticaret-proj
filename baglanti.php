@@ -10,14 +10,12 @@ try {
      $baglanti = new PDO("mysql:host=$sunucu;dbname=$database", "$username", "$password");
      if($baglanti){
       echo "basarili";
-
-    
      }
      
 } catch ( PDOException $e ){
      print "Baglanti hatasi: " . $e->getMessage();
 }
-$conn = null;
+$baglanti = null;
 
 
 
