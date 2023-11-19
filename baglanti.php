@@ -9,7 +9,7 @@ $password = "123456";
 try {
      $baglanti = new PDO("mysql:host=$sunucu;dbname=$database", "$username", "$password");
      if($baglanti){
-      echo "basarili";
+       echo "server online";
      }
      
 } catch ( PDOException $e ){
