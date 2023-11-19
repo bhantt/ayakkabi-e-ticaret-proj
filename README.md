@@ -1,5 +1,8 @@
 # ayakkabi-e-ticaret-proj
  ayakkabı merkezli e-ticaret sitesi
 
- Çalıştırmak için XAMPP uygulamasına ihtiyaç var. Klasörü uygulamanın kurulu olduğu diske gidip  "htdocs" klasörüne atmanız gerek. Uygulamadan Apache Server'ı ve MySql Server'ı başlattıktan sonra herhangi bir tarayıcıya gidip link kısmına "localhost" yazmanız gerek. Eğer sizde zaten bu uygulamayı kullanıyorsanız localhost yazdıktan sonra çıkan klasörlerden bu klasörü seçerseniz otomatik olarak sayfa açılacaktır.
-
+sunucuya bağlanma hatası alacaksınız çözümü aynı ağa bağlı olmamız gerek. 
+1-bir klasöre bu dosyları atın --> 
+2-xampp'deki htdcos klasörüne atın -->
+3-apache serverınızı başlatın ve tarayıcınızın link terine localhost yazın -->
+4- ardından eklediğiniz klasöre tıklayın sayfa otomatik açılacaktır.
