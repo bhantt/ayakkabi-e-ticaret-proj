@@ -2,7 +2,7 @@
 
 $sunucu = "192.168.1.101";
 $database = "eticaret";
-$username = "pardusbatu";
+$username = "serverbatu";
 $password = "123456";
 
 
