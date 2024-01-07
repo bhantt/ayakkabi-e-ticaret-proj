@@ -30,7 +30,7 @@ include("baglanti.php");
                 <li><a href="">Ana Sayfa</a></li>
                 <li><a href="">Hakkımızda</a></li>
                 <li><a href="">İletişim</a></li>
-               <li><a href="">Hesap</a></li>
+               <li><a href="acc.php">Hesap</a></li>
 
                 </ul>
             </nav>
@@ -68,7 +68,7 @@ include("baglanti.php");
                </div>
             </div>
            
-      </div>
+      </div>             
 
       <!-------- öne çıkanlar ------>
          <div class="small-container">
