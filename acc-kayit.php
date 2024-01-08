@@ -30,11 +30,11 @@ require "baglanti.php"
           <label for="login-pass" class="login-field-label"></label>
         </div>
         <div class="control-group">
-          <input type="password" name="password-again" id="login-pass" class="login_field" placeholder="Tekrar Şifre">
+          <input type="password" name="password-again" id="login-pass-again" class="login_field" placeholder="Tekrar Şifre">
           <label for="login-pass" class="login-field-label"></label>
         </div>
         
-        <button href="islem.php" class="btn-login">Kayıt Ol</button>
+        <button href="islem.php" class="btn-login" name="kayit-btn">Kayıt Ol</button>
       </div>
     </form>
     <a href="index.php"><button class="btn-login">Giriş Yap</button></a>
