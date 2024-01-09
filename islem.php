@@ -14,7 +14,7 @@ if (isset($_POST['kayit-btn'])) {
         echo "Şifreler uyuşmuyor.";
     } else {
         // Kullanıcıyı veritabanına ekleme
-        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+        
 
         // Önce aynı kullanıcı adının olup olmadığını kontrol etmek isteyebilirsiniz
         $stmt = $baglanti->prepare("SELECT * FROM users WHERE user_name = :username");
@@ -28,7 +28,7 @@ if (isset($_POST['kayit-btn'])) {
             // Kullanıcıyı veritabanına ekle
             $insertStmt = $baglanti->prepare("INSERT INTO users (user_name, user_password) VALUES (:username, :password)");
             $insertStmt->bindParam(':username', $username);
-            $insertStmt->bindParam(':password', $hashedPassword);
+            $insertStmt->bindParam(':password', $password);
             $insertStmt->execute();
             echo "Kayıt başarıyla tamamlandı. Hoş geldin, $username!";
         }
