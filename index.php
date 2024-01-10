@@ -77,7 +77,7 @@ include("baglanti.php");
                <div class="col-4">
                   <img src="images/onecikan.jpg" alt="">
                   <h4>Pembe Koşu Ayakkabısı</h4>
-                  <p>470TL</p>
+                  <p>1200TL</p>
                </div>
             </div>
          </div>
