@@ -1,17 +1,45 @@
 <?php
 include "giris-islem.php";
 
-// SEPETİ GÖSTER
-$cart_statement = $db->prepare("SELECT * FROM cart");
-$cart_statement->execute();
-$cart_items = $cart_statement->fetchAll(PDO::FETCH_ASSOC);
+session_start();
+$user_name = $_SESSION['user_name'];
 
-if ($cart_items) {
-    echo "<h2>SİPARİŞLERİNİZ</h2>";
-    foreach ($cart_items as $cart_item) {
-        echo "<p>{$cart_item['product_name']} - {$cart_item['quantity']} adet - {$cart_item['price']} TL</p>";
-    }
-} else {
-    echo "<p>Sepetiniz boş.</p>";
+$cart_statement = $baglanti->prepare("SELECT * FROM cart WHERE user_id = :user_name");
+$cart_statement->bindParam(':user_name', $user_name);
+$cart_statement->execute();
+$cart_items = $cart_statement->fetchAll();
+
+foreach ($cart_items as $item) {
+    echo "<div class=\"cart-item\">";
+    echo "<h2>{$item['product_name']}</h2>";
+    echo "<p>{$item['quantity']} adet</p>";
+    echo "<p>{$item['price']} TL</p>";
+    echo "</div>";
 }
+
+
+echo "<form method='post'>";
+echo "<button type='submit' name='temizle'>Sepeti Temizle</button>";
+echo "</form>";
+
+// Sepeti Temizleme İşlemi
+if (isset($_POST['temizle'])) {
+    $clear_cart_statement = $baglanti->prepare("DELETE FROM cart WHERE user_id = :user_name");
+    $clear_cart_statement->bindParam(':user_name', $user_name);
+    $clear_cart_statement->execute();
+    header("Location: myprofile.php");
+    echo "<p>Sepetiniz temizlendi!</p>";
+   
+}
+
+
+echo "<form method='post'>";
+echo "<button type='submit' name='onayla'>Sepeti Onayla</button>";
+echo "</form>";
+
+if(isset($_POST['onayla'])){
+    header("Location: onaylama.php");
+}
+
 ?>
+

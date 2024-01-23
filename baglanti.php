@@ -1,6 +1,6 @@
 <?php
 
-$sunucu = "192.168.1.102";
+$sunucu = "192.168.1.101";
 $database = "eticaret";
 $username = "serverbatu";
 $password = "123456";

@@ -23,7 +23,7 @@
           <input type="password" name="password" id="login-pass" class="login_field" placeholder="Şifre">
           <label for="login-pass" class="login-field-label"></label>
         </div>
-        <button type="submit" href="user.php" class="btn-login" name="giris">Giriş Yap</button>
+        <button type="submit" class="btn-login" name="giris">Giriş Yap</button>
         
       </div>
     </form>
