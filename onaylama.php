@@ -30,6 +30,15 @@ foreach ($cart_items as $item) {
     echo "</div>";
 }
 
+sleep(2);
+
+$clear_cart_statement = $baglanti->prepare("DELETE FROM cart WHERE user_id = :user_name");
+$clear_cart_statement->bindParam(':user_name', $user_name);
+$clear_cart_statement->execute();
+
+ 
+
+
 
 echo "----Siparişiniz Onaylandı!----";
 

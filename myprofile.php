@@ -38,14 +38,7 @@ echo "<button type='submit' name='onayla'>Sepeti Onayla</button>";
 echo "</form>";
 
 if(isset($_POST['onayla'])){
-    if (isset($_POST['onayla'])) {
-        $clear_cart_statement = $baglanti->prepare("DELETE FROM cart WHERE user_id = :user_name");
-        $clear_cart_statement->bindParam(':user_name', $user_name);
-        $clear_cart_statement->execute();
-        header("Location: myprofile.php");
-        echo "<p>Sepetiniz temizlendi!</p>";
-       
-    }
+  
     header("Location: onaylama.php");
 }
 
