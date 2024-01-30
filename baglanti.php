@@ -1,9 +1,9 @@
 <?php
 
-$sunucu = "192.168.1.101";
-$database = "eticaret";
-$username = "serverbatu";
-$password = "123456";
+$sunucu = "xxx";
+$database = "xxx";
+$username = "xxx";
+$password = "xxx";
 
 try {
     $baglanti = new PDO("mysql:host=$sunucu;dbname=$database", $username, $password);
